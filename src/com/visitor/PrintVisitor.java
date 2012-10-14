@@ -1,16 +1,28 @@
 package com.visitor;
-
+/**
+ * Klasa implementująca interfejs Visitor
+ * Wyświetla obiekty
+ * 
+ * @author Michał Obiała
+ *
+ */
 public class PrintVisitor implements Visitor {
 
-	public void visit(Leaf l) {
-		System.out.println("-" + l.getName());
+	/**
+	 * Wyświetlanie nazwy obiektu typu Leaf
+	 */
+	public void visit(Leaf leaf) {
+		System.out.println("-" + leaf.getName());
 	}
 
-	public void visit(Composite n) {
-		System.out.println("+" + n.getName());
-		for (Component c : n.components) {
+	/**
+	 * Wyświetlanie nazwy obiektu typu Composite
+	 */
+	public void visit(Composite composite) {
+		System.out.println("+" + composite.getName());
+		for (Component c : composite.components) {
 			System.out.print("  ");
-			if (!(n.getChild(1) != null)) {
+			if (!(composite.getChild(1) != null)) {
 				System.out.print("  ");
 			}
 			c.accept(this);

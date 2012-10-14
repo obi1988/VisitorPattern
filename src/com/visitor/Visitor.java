@@ -1,7 +1,7 @@
 package com.visitor;
 /**
  * Interfejs Visitor
- * @author obi1988
+ * @author Michał Obiała
  *
  */
 interface Visitor {

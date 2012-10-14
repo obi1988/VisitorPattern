@@ -1,7 +1,7 @@
 package com.visitor;
 /**
  * Klasa implementująca interfejs Komponent, odpowiedzialna za reprezentację "liścia"
- * @author obi1988
+ * @author Michał Obiała
  *
  */
 public class Leaf implements Component {
@@ -15,15 +15,8 @@ public class Leaf implements Component {
 		return name;
 	}
 
-	public Component getChild(int i) {
-		return null;
-	}
-
 	public void accept(Visitor v) {
 		v.visit(this);
-	}
-
-	public void add(Component c) {
 	}
 
 }

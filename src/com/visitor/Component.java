@@ -1,15 +1,15 @@
 package com.visitor;
 /**
  * Interfejs Component
- * @author obi1988
+ * @author Michał Obiała
  *
  */
 public interface Component {
+	/**
+	 * metoda pozwala pobrać nazwę obiektu
+	 * @return String
+	 */
 	public String getName();
-
-	public void add(Component c);
-
-	public Component getChild(int i);
 
 	void accept(Visitor v);
 }
