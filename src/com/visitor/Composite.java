@@ -1,4 +1,4 @@
-package com.pack;
+package com.visitor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +12,8 @@ public class Composite implements Component {
 	}
 
 	public Component getChild(int i) {
-		/*		if (i > components.size() - 1) {
-			return null;
-		}
-	*/	
 		Component strReturn;
-		strReturn = components.size()-1 < i ? null : components.get(i);		
+		strReturn = components.size() - 1 < i ? null : components.get(i);
 		return strReturn;
 	}
 

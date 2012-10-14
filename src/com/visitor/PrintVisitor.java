@@ -1,4 +1,4 @@
-package com.pack;
+package com.visitor;
 
 public class PrintVisitor implements Visitor {
 
@@ -10,13 +10,10 @@ public class PrintVisitor implements Visitor {
 		System.out.println("+" + n.getName());
 		for (Component c : n.components) {
 			System.out.print("  ");
-			if(!(n.getChild(1)!=null)){
+			if (!(n.getChild(1) != null)) {
 				System.out.print("  ");
-			}c.accept(this);
-			
-			
+			}
+			c.accept(this);
 		}
-
 	}
-
 }
