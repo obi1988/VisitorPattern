@@ -1,30 +1,39 @@
 package com.visitor;
 
+import com.visitor.Component;
+import com.visitor.Composite;
+import com.visitor.Leaf;
+/**
+ * Główna klasa aplikacji, 
+ * @author obi1988
+ *
+ */
 public class Main {
 	public static void main(String[] args) {
-		Component leaf = new Leaf("Wydruki");
-		Component leaf2 = new Leaf("Informacje");
-		Component leaf3 = new Leaf("Lista Oczekujących");
-		Component leaf4 = new Leaf("Moje");
-		Component leaf5 = new Leaf("Zmień hasło");
-		Component comp = new Composite("Administracja");
-		comp.add(leaf5);
-		Component base = new Composite("Menu Główne");
-		Component base2 = new Composite("Aktywności");
-		Component base3 = new Composite("Sprawy");
 
-		base.add(leaf);
-		base.add(leaf2);
-		base.add(comp);
-		base2.add(leaf3);
-		base2.add(leaf4);
-		base3.add(leaf3);
-		base3.add(leaf4);
-		base2.add(leaf5);
+		
+		Component leafBaseOne = new Leaf("Wydruki");
+		Component leafBaseTwo = new Leaf("Informacje");
+		Component leafOne = new Leaf("Lista Oczekujących");
+		Component leafTwo = new Leaf("Moje");
+		Component leafBaseAOne = new Leaf("Zmień hasło");
+		Component nodeA = new Composite("Administracja");
+		nodeA.add(leafBaseAOne);
+		Component base = new Composite("Menu Główne");
+		Component baseA = new Composite("Aktywności");
+		Component baseS = new Composite("Sprawy");
+		
+		base.add(leafBaseOne);
+		base.add(leafBaseTwo);
+		base.add(nodeA);
+		baseA.add(leafOne);
+		baseA.add(leafTwo);
+		baseS.add(leafOne);
+		baseS.add(leafTwo);
 
 		base.accept(new PrintVisitor());
-		base2.accept(new PrintVisitor());
-		base3.accept(new PrintVisitor());
+		baseA.accept(new PrintVisitor());
+		baseS.accept(new PrintVisitor());
 	}
 
 }

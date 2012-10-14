@@ -1,5 +1,9 @@
 package com.visitor;
-
+/**
+ * Interfejs Component
+ * @author obi1988
+ *
+ */
 public interface Component {
 	public String getName();
 
