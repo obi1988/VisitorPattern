@@ -9,8 +9,8 @@ public class LeafTest {
 
 	@Test
 	public void testGetName() {
-		Leaf comp = new Leaf("test");
-		String result = comp.getName();
+		Leaf leaf = new Leaf("test");
+		String result = leaf.getName();
 		assertEquals("test", result);
 	}
 
