@@ -23,7 +23,7 @@ public class PrintVisitor implements Visitor {
 		for (Component c : composite.components) {
 			System.out.print("  ");
 			if (!(composite.getChild(1) != null)) {
-				System.out.print("  ");
+				System.out.print("   ");
 			}
 			c.accept(this);
 		}

@@ -11,16 +11,16 @@ public class Main {
 	public static void main(String[] args) {
 
 		
-		Leaf leafBaseOne = new Leaf("Wydruki");
-		Leaf leafBaseTwo = new Leaf("Informacje");
-		Leaf leafOne = new Leaf("Lista Oczekujących");
-		Leaf leafTwo = new Leaf("Moje");
-		Leaf leafBaseAOne = new Leaf("Zmień hasło");
-		Composite nodeA = new Composite("Administracja");
+		Component leafBaseOne = new Leaf("Wydruki");
+		Component leafBaseTwo = new Leaf("Informacje");
+		Component leafOne = new Leaf("Lista Oczekujących");
+		Component leafTwo = new Leaf("Moje");
+		Component leafBaseAOne = new Leaf("Zmień hasło");
+		Component nodeA = new Composite("Administracja");
 		nodeA.add(leafBaseAOne);
-		Composite base = new Composite("Menu Główne");
-		Composite baseA = new Composite("Aktywności");
-		Composite baseS = new Composite("Sprawy");
+		Component base = new Composite("Menu Główne");
+		Component baseA = new Composite("Aktywności");
+		Component baseS = new Composite("Sprawy");
 		
 		base.add(leafBaseOne);
 		base.add(leafBaseTwo);

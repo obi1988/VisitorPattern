@@ -19,4 +19,9 @@ public class Leaf implements Component {
 		v.visit(this);
 	}
 
+	public void add(Component state) {
+		//lisc nie moze miec potomka
+		
+	}
+
 }

@@ -10,6 +10,6 @@ public interface Component {
 	 * @return String
 	 */
 	public String getName();
-
+	public void add(Component state);
 	void accept(Visitor v);
 }
